@@ -1,0 +1,76 @@
+\documentclass[final]{svjour2}
+\usepackage{graphicx}
+\usepackage{rotating}
+\usepackage{amssymb}
+\usepackage{mathptmx}
+\usepackage[numbers]{natbib}
+%\usepackage[nofighead,nomarkers]{endfloat}
+\makeatletter
+\journalname{Journal of Low Temperature Physics}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\bibpunct{}{}{,}{s}{}{,}
+
+\begin{document}
+
+\newcommand{\hdblarrow}{H\makebox[0.9ex][l]{$\downdownarrows$}-}
+\title{Design Guidelines and Considerations for Using Trusses and Thin-walled Tubes as Cryogenic Support Structures}
+
+\author{E. Kramer \and N. Kellaris  \and M. Daal \and N. Zobrist \and S. Govindjee \and S. Sadoulet \and S. Golwala} \and M. Hollister}
+
+\institute{Department of Physics, University of California Berkeley,\\ Berkeley, CA 94709, USA\\ Tel.:\\ Fax:\\
+\email{ekramer@berkeley.edu}}
+
+\date{05.18.2013}
+
+\maketitle
+
+
+\begin{abstract}
+
+Design specifications for the support structures of low temperature instrumentation often call for low thermal conductivity between temperature stages, high stiffness and defined load bearing capabilities. The challenge is usually to find a design that minimizes heat transfer while meeting strength and rigidity specifications.  Common design solutions employ thin-walled tubes and truss structures. In this contribution, we suggest, analyze and test several design solutions that incorporate such structures. In addition, we present equations for failure modes, fundamental frequencies and structural stiffness.
+
+\keywords{Trusses, Thin-walled tubes}
+
+\end{abstract}
+
+\section{Introduction}
+Both slender member truss and thin-walled tube structures exhibit desirable qualities for low temperature instrumentation support structures in their high structural stiffness to low thermal conductivity when compared to other types of supports.  Designing optimal structures that obtain the least amount of thermal transfer between stages while still remaining rigid enough to support expected forces from both use and while handling can be and arduous task however.  In the case of trusses, computer simulation and structural stiffness equations allows us to test a variety of structures and identify members in danger of failure as well as low or zero force members (which can be removed from the structure without repercussion) without needing to fabricate and physically test each design iteration.  Similarly, thin-walled tube structures choices can also be narrowed down mathematically as they only depend on a small number of geometric design parameters.  In both cases further strength testing can be performed to confirm failure modes and breaking points that were found theoretically as well as to confirm desired factors of safety.      
+
+
+\section{Experimental details}
+\begin{figure}
+\begin{center}
+\includegraphics[%
+  width=0.65\linewidth,
+  keepaspectratio]{placeholder1}
+\end{center}
+\caption{A completed truss structure with carbon fiber members used for strength testing}
+\label{compare}
+\end{figure}
+For this experiment, our analysis and confirmation of presented stiffness and failure equations stemmed from a computer simulation for truss structures and physical strength testing both truss and thin-walled tube structures.  For the truss structure computer simulation we used Matlab as a medium.  It functions by de-constructing a given truss geometry into matrices that define its joint positions with constraints, connectivity, and external loading.  Utilizing matrix algebra Matlab is able to solve for all the forces along each truss member as well as all of the reaction forces on the fixed pin joints for any given stable structure.  The outputs of our simulation were used to compare to our physical strength testing to confirm their validity.  Physical strength testing was done on a single axis machine with tension and compression capabilities. Samples were fitted to be locked into the machine both along their center axis and slightly off axis to test both their tensile and compressive strength in the on axis and off axis situation for buckling criteria.  An external frame was also used to allow our samples to be mounted horizontally, either supported as a pair of cantilever beams or a single simply supported beam, to be tested for pure shear and bending stiffness respectively.  We tested four sample types consisting of three truss structures and one thin-walled tube structure.  All three truss structures were identical in overall design, utilizing six members to connect two copper hexagons base plates.  We tested three different types of truss members which included two carbon fiber cylinders of different crossectional diameters and one Titanium rectangular crossection member. The thin-walled tube structures were constructed from a single two inch length of two inch outside diameter Kapton tube glued to two gold-plated baseplates. 
+
+%Include more on design specifications?
+%Include pictures of tubes/trusses
+
+\section{Results}
+---
+%To be filled in
+
+\section{Conclusions}
+--- 
+%To be filled in
+
+\begin{acknowledgements}
+---
+\end{acknowledgements}
+
+\pagebreak
+
+\begin{thebibliography}{99}
+
+\end{thebibliography}
+
+\end{document}
