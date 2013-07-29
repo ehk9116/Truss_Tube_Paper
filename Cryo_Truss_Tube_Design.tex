@@ -20,92 +20,35 @@
 \begin{document}
 
 \newcommand{\hdblarrow}{H\makebox[0.9ex][l]{$\downdownarrows$}-}
-\title{Design Considerations for Cryogenic Support Structures}
+\title{Material Selection for Cryogenic Support Structures}
 
 \author{E. Kramer \and N. Kellaris  \and M. Daal \and N. Zobrist \and S. Govindjee \and B. Sadoulet \and S. Golwala \and M. Hollister}
 
 \institute{Department of Physics, U.C. Berkeley,\\ Berkeley, CA 94709, USA\\
 \email{ekramer@berkeley.edu}}
 
-\date{07.15.2013}
+\date{07.29.2013}
 
 \maketitle
 
 \begin{abstract}
 
-Design specifications for the support structures of low temperature instrumentation often call for low thermal conductivity between temperature stages, high stiffness, and specific load bearing capabilities. The challenge is usually to find a design that minimizes heat transfer along the structure while meeting strength and rigidity specifications.  Common design solutions employ thin-walled tubes and truss structures. In this contribution, we suggest, analyze and test several design approaches that incorporate such structures. In addition, we present some equations for failure modes and structural stiffness testing results.
+Design specifications for the support structures of low temperature instrumentation often call for low thermal conductivity between temperature stages, high stiffness, and specific load bearing capabilities. The challenge is usually to find a design that minimizes heat transfer along the structure while meeting strength and rigidity specifications.  Common design solutions employ thin-walled tubes and truss structures.  While overall design plays an important part in both strength and heat flux between stages, material selection can effect a structures properties significantly.  In this contribution, we suggest and compare several alternative materials to the currently most widely used materials for building support structures. In addition, we offer some design considerations for using these materials in truss and tube structures.
 
-\keywords{Truss, Thin-walled tube, Cryogenic Tower}
+\keywords{Cryogenic Tower, Thermal Conductivity, Material Strength}
 
 \end{abstract}
 
 \section{Introduction}
-Both slender member truss and thin-walled tube structures exhibit desirable qualities for low temperature instrumentation support structures due to their high structural stiffness to low thermal conductance across temperature stages.  Designing optimal structures that obtain the lowest thermal conductance between temperature stages while still remaining structurally adequate to support both forces while in use at base temperature and while handling at room temperature is a optimization problem.  Theoretical equations and computer simulation of structural stiffness allow one to narrow down possible design choices without needing to fabricate and physically test each design iteration.  While highly useful, calculations and computer simulations are not sufficient on their own. In the lab under non-ideal circumstances, materials and structures typically fail before their theoretical yield or break point due to imperfections, including but not limited to \textcolor{red}{impurities <- Need a better word} in the material (microscopic fractures or holes), and misaligned or \textcolor{red}{(misshapen <- huh?)} elements of the overall design.  [Due to this, physical strength testing of a fabricated piece can be performed to confirm failure modes as well as discover unexpected ones.  Results from such tests allow one to better obtain the performance and factor of safety desired for the part being designed. <- maybe between to simply say `actual strength measurements are needed to confirm strength expectations of fabricated parts']
+Both slender member truss and thin-walled tube structures exhibit desirable qualities for low temperature instrumentation support structures due to their design allowing for high structural stiffness to low thermal conductance across temperature stages.  Designing optimal structures that obtain the lowest thermal conductance between temperature stages while still remaining structurally adequate to support both forces while in use at base temperature and while handling at room temperature is a optimization problem.  While the actual physical design geometry plays a major role in the overall effectiveness of a structure, material selection is jut as important.  Unlike design geometry alterations, a change of material used to build a structure tends to be a much easier way to improve upon a design in terms of its performance under a force of heat load. Another advantage of material selection in terms of optimization comes in the form of theoretical equations and computer simulation of a structures projected performance.  Unlike geometric changes to the structures shape, a change in the material used does not necessitate a change in the governing equations of model for theoretical evaluation due to the fact that material properties tend to be defined depended variables in both.  Material selection is also an important factor to keep in mind when it comes to their non-ideal performance in the lab. Under non-ideal circumstances, materials and structures typically fail before their theoretical yield or break point due to imperfections, including but not limited to impurities or microscopic fractures introduced while processing the material.
 
-\section{Theory and Experimental details}
-\textcolor{red}{I think we should modify our focus a bit. I think we should focus on a presenting a design pathway for making these support structures rather than the results of the tests we have actually done, which can receive secondary focus.    
-In partisular, lets think about why someone would like to read our report. is it about our particular support design conclusions or our method of evaluating/analyzing them. I think its the latter.}
-\textcolor{red}{[something more like -> We considered a few structural support designs, first performing an analysis via computer simulation, then  fabricating and finally physically testing them]}.  Our truss structure analysis was performed using a matrix application of the method of joints.  In this technique all forces in truss members were assumed to be \textcolor{red}{[normal to their direction <- Whats this mean]}.  The forces at each node connecting truss members were statically determined using a system of equations, the boundary conditions (fixed, clamped, free), connectivity, and external loading \textcolor{red}{[is there a equation that can summarize this method?]}.  \textcolor{red}{[This method allows us to solve for the forces along every the truss member (tension or compression) as well as all of the reaction forces on the fixed pin joints for a given stable and statically determinable structure.  Using these solutions and the material properties of the truss members, failure points were identified for each truss member, giving the structure an overall point of failure at when its weakest member fails. <- possibly eliminate and replace with equation]}  The external force used for analysis was a shear/bending force where one end was assumed to be fixed while the other was subjected to a load perpendicular to the normal axis of the tower structure in order to create a cantilever beam scenario \textcolor{red}{[<- this needs an illustration].}  
-Tube analysis was done using the model presented by \textcolor{red}{[Govindjee ([1]) <- cite with bibtex!]} which predicts failure in tube structures based off of their material composition as well as radial and thickness dimensions. The load was also assumed to be that of a simple bending cantilever beam setup as this is the most expected force to lead to failure in the Soudan tower.  Given a radius $a$ and a thickness $t$, the model considers four failure modes, shear instability, bending instability, material failure from normal stresses, and material failure from shear stresses.  Shear instability occurs when the maximum shear stress exceeds the critical torsional stress due to a purely torsional load.  This critical load ($P_{c}$), the point at which any loads above it will cause failure can be found using: \textcolor{red}{[OK... We cannot just right down these equations since they have never been rpesented in the literature before. you have to present some derivation. did't govingees report contain derivation? do you have the preport or are you looking at nicks document?]}
+\section{Material Parameters}
 
-\begin{eqnarray}
-P_{c}^{s} = \frac{\pi^3E}{12(1-\nu^2)^{-\frac{5}{8}}}a_{s}\frac{a^{1/4}t^{9/4}}{L^{1/2}}
-\end{eqnarray}
+Materials are defined by specific properties which are theoretically the same for all specimens of a single material type.  In actuality, these material properties deviate slightly from sample to sample due to differences in manufacturing, however the deviation is negligible for high quality production.  There are a few main properties that are of interest when creating cryogenic tower support structures.  The main structural property is the material's Youngs Modulus.  Youngs Modulus is a property that directly defines a materials stiffness or elasticity.  Materials with high Youngs Modulus are better suited for creating stiff structures as they deform less under load than materials with lower ones.  Youngs Modulus can be further broken down into compressive and tensile modulus for non isometric materials. Other structural properties of interest include both tensile and compressive strength which define the materials ability to withstand an applied force, in the tensile and compressive directions respectively, without failing (plastic deformation or fracture).  While not defined by a specific property, the type of material (brittle or ductile) should be noted due to the fact that buckling tends to occur before the onset of other failure modes in non-brittle materials.  Materials cannot be solely selected on their structural properties however, as thermal resistivity between stages is also a concern in cryogenic support structures. Thermal conductivity is a great concern, which narrows down a large number of materials that typically are used in non-cryogenic application structures.  Overall materials must be stiff enough to not fail under expected loads ranges while keeping their cross section is low as possible to minimize the amount of heat transfer between temperature stages.  In general when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.\cite{Hastings1993}  
 
-Buckling instability takes place when the maximum compressive stress anywhere in the thin walled tube exceeds a critical value.  By approximating the wall of a tube as a membrane the maximum stress in the tube is given by $\sigma_{b} = PL/a^2t\pi$. This leads us to a critical stress value given by Ba$\check{z}$ant [3].
+\section{Materials Property Results}
 
-\begin{eqnarray}
-\sigma_{c}=\frac{E}{\sqrt{3(1-\nu^2)}}\frac{t}{a}.
-\end{eqnarray}
-
-We can then take this critical stress value and transform it into a critical load for localized buckling:
-
-\begin{eqnarray}
-P_{c}^{b} = \frac{E \pi}{\sqrt{3(1-\nu^2)}}\frac{t^2a}{L}
-\end{eqnarray}
-
-More straightforward than buckling, a tube can also fail just from exceeding its maximum normal stress. This occurs when the force applied is greater than the critical normal stress value ($P_{c}^{mn}$) determined by $\sigma_{f}$, the normal stress limit:
-
-\begin{eqnarray}
-P_{c}^{mn} = \sigma_{f} \pi \frac{a^2t}{L}
-\end{eqnarray}
-
-The last failure mode examined for tubes was that when the tube exceeds its shear stress limit $\tau_{f}$. Brittle material can typically be approximated by $\tau_{f} = \sigma_{t}\sqrt{R/3} $ where $R = \sigma_{c}/\sigma_{t}$ (compressive/tensile) while ductile materials have $\tau_{f} \approx \sigma_{f}/2 \ \text{or} \ \sigma_{f}/\sqrt{3}$ [4].
-
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[%
-  width=0.9\linewidth,
-  keepaspectratio]{SW}
-\end{center}
-\caption{Our hexapod truss structure design (left) and a simple thin walled tube design (right)}
-\label{SW}
-\end{figure}
-
-Using these theoretical results as guidelines, we then fabricated a few promising designs (shown above), including a hexapod truss structure and several pure thin walled tubes. These fabricated parts were then subjected to loads and the results were compared to the theoretical ones found previously.  Strength testing was done on a single axis machine with tension and compression capabilities. \textcolor{red}{Samples were fitted to be able to be locked into the machine both along their center axis as well slightly off axis in order to test both tensile and compressive strength in the on axis and off axis.  An external frame was also used to allow our samples to be mounted horizontally, either supported as a pair of cantilever beams or a single simply supported beam, to be tested for pure shear and bending stiffness respectively.  We tested four sample types consisting of three truss structures and one thin-walled tube structure.  All three truss structures were identical in overall design, utilizing six members to connect two copper or aluminum hexagons base plates <- needs illustration}.  We tested three different types of truss members which included two Graphlite of 40 and 80 mil cross sectional diameters and one Titanium rectangular cross section member. The thin-walled tube structures were constructed from a single two inch length of two inch outside diameter Vespel tube connected with Stycast 1266 to two gold-plated copper baseplates. \textcolor{red} {Two SP1 and SP22 10 mil wall thickness truss tube members were also fabricated to test on their own. <- not sure we should present these results. I cannot think of a way to tie them in without seeming random}
-
-\section{Results}
-Currently simulation and testing has been completed on the 40 and 80 mil hexapod truss structures under a pure bending load and on the SP1 and SP22 tubes in tension.  
-All samples were tested to failure in a strain controlled environment.  The pull rate was 0.5 mm/sec for all tests.  Results of the four tests in a plot of stress vs strain is presented below.
-
-\begin{figure}[!ht]
-\begin{center}
-\includegraphics[%
-  width=0.65\linewidth,
-  keepaspectratio]{Test}
-\end{center}
-\caption{\textcolor{red}{you have to clean up the data. remove the offsets and the slips.}The stress and strain vs time of four strength tests. 40 mil Graphlite hexapod in pure bending (top-left), 80 mil Graphlite hexapod in pure bending (top-right), 10 mil wall thickness SP1 tube truss member in tension (bottom-left), and 10 mil wall thickness SP22 tube truss member in tension (bottom-right).}
-\label{Test}
-\end{figure}
-
-\textcolor{red}{Results of these tests fit our expectations. <- first present expectations}    The SP1 and SP22 tube structures, being brittle materials, failed in due to exceeding their respective maximum normal stresses.  Their failure point came well before their simplified theoretical value however due to the small ventilation holes in \textcolor{red}{their side for use in a vacuum environment <- this is a good reason not to present these results. We should really fabricat a test with no vent hole and comapare}.  Upon examination of the fracture surface, the failure propagated from this hole as its starting point, which is to be expected as circular holes in materials create localized stress concentrations of approximately \textcolor{red}{3.04 <- where did this come from?} times greater than the stress elsewhere in the structure.  
-
-The hexapod structures, while not pushed to \textcolor{red}{fracture failure <- some did fracture!}, also reacted in the predicted way.  While our program successfully predicted which members would be put in tension and compression as well as which member would buckle and fail first, the model results were slightly off on the displacement of the overall structure.  \textcolor{red}{The 40 mil structure was predicted to displace 3.175 mm under the maximum load we applied of 250 N (125 on each tower structure) but only displaced 0.5 mm when that force was reached. Each 80 mil structure was calculated to displace 12.7 mm at the maximum applied force of 1150 N across two tower structures.  Our data reveals that at that maximum point, each tower had only displaced apprloximatly 4 mm.  These discrepancies are most likely due to the approximations in our program about truss structure joints. <- this is not very good agreement. How can the program be imporved. Also, we cannot present these expectations without more discussion/formulation of the computer model you used.}  We assumed an ideal truss structure with all joints that are not fixed would be able to rotate and move freely in all three dimensions.  Due to design simplicity, our fabricated hexapods did not have free joints, but instead were clamped and only allowed to rotate in specific directions.  This minor change from the ideal situation gave the structures a greater stiffness and resistance to bucking which resulted in less deformation.
-
-\section{Design Considerations and Material Selection}
-When designing truss and tube structures there are numerous design choices available to meet the constraints of the system.  Material type, truss member cross-section, tube wall thickness, and overall structure layout are all variables that can be set by the designer.  Each of these variables add degrees of freedom to designing, making it difficult to have a single recipe for the optimum structure.  There are certain design considerations however that can lead to stiffer and more predictable structures.  \textcolor{red}{maybe present the following design considerations as a list...} Buckling is a major concern when using slender truss members.  While not always resulting in fracture of the structure, it can have a fast onset and lead to a severely deformed structure.  When choosing materials, one should note that buckling tends to occur before other failure modes in non-brittle materials. \textcolor{red}{The use of tubes as truss members reduces the susceptibility to buckling due to the fact that buckling is a more prominent failure mode in solid rods <- this is where we would talk about and cite literature on  `slenderness factors'}.  While not ideal for truss structures in terms of theoretical functionality, clamping joints as opposed to letting them be free to rotate reduces susceptibility to buckling thus giving the overall structure greater stiffness. Also when designing trusses, placing the joints in line with the connecting members offers the greatest stability due to truss members ideally only carry forces along their normal direction.  \textcolor{red}{Symmetry should be noted as well when designing as any type of non symmetrical structure can fail in a non-symmetrical way <- this is not as clear as it could be. }.  Finally holes or other surface features of any type should be avoided whenever possible because they will result in stress concentrations of several factors which in turn leads to earlier failure.  
-
-Along with design choices themselves, material selection is also an important  choice in both thin-walled tubes and truss structures. Youngs Modulus is a material specific property that directly defines a materials stiffness or elasticity.  Materials with high Youngs Modulus are better suited for creating stiff structures. Materials cannot be solely selected on their structural properties however, as thermal resistivity is also a concern in cryogenic support structures.  Materials must be stiff enough to not fail under expected loads ranges while keeping their cross section is low as possible to minimize the amount of heat transfer between temperature stages.  In general when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.  The plot below we present a few useful materials with a low thermal conductance \textcolor{red}{<- conductivity not conductance. they are two different things, also note that this the modulus at room temp. We really should measure these properties at 4k} to Youngs Modulus ratio as well as a table showing material strength:
+The plot below we present a few useful materials with a low thermal conductivity to Youngs Modulus ratio as well as a table showing material strength.\cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Wood2009}\cite{Ventura2009}
 
 \begin{figure}[!ht]
 \begin{center}
@@ -113,11 +56,19 @@ Along with design choices themselves, material selection is also an important  c
   width=0.65\linewidth,
   keepaspectratio]{Mats}
 \end{center}
-\caption{ \textcolor{red}{i thought you were going to include some standard materials like G10 etc?}A selections of materials with their Youngs modulus normalized by their thermal conductivity.  Lower values correspond to more ideal materials for support structures}
+\caption{A selection of popular and useful materials with their room temperature Youngs modulus normalized by their thermal conductivity.  Lower values correspond to materials with lower thermal conductivity to stiffness ratio, thus making them more ideal materials for support structures}
 \label{Mats}
 \end{figure}
 
-(MATERIAL TABLE HERE)
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[%
+  width=0.65\linewidth,
+  keepaspectratio]{SW}
+\end{center}
+\caption{Material properties of some select materials}
+\label{SW}
+\end{figure}
 
 \section{Conclusions}
 While many different solutions are available when creating cryogenic support structures, following certain design criteria and avoiding potential pitfalls that compromise structural strength allow for tube and truss structures to remain string while providing low heat loads between stages.  It is important to design with a large factor of safety beyond the theoretical failure point of a structure due to the imperfection dominated failure modes that exist in actual structures of this variety.  When considering truss members, tubes offer high stiffness but little to no elastic region before fracture.  Rods offer more elasticity which makes them susceptible to buckling.
@@ -128,17 +79,42 @@ We would like to thank S. Govindjee for technical assistance and use of his stre
 
 \begin{thebibliography}{99}
 
-\bibitem{Gov}
-Govindjee note (how do I cite this?)
-
-\bibitem{Hastings}
+\bibitem{Hastings1993}
 Peter R. Hastings and D.M. Montgomery. Support of cooled components in astronomical instruments. Cryogenics, 33(11):1032–1036, 1993.
 
-\bibitem{Bazant}
-Z. Ba$\check{z}$ant and L. Cedoli. Stability of structures: elastic, inelastic, fracture, and damage theories. Oxford University Press, New York, 1991.
+%%%%%% Young's modulus bibliography items %%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\bibitem{Ely}
-R.E. Ely. Strength of graphite tube specimens under combined stresses. Journal of the American Society, 48:505– 508, 1965.
+\bibitem{Doty1981}
+F.D. Doty and P.D. Ellis, {\it Rev. Sci. Instrum.} \textbf{52(12)}, 1868, (1981).
+
+\bibitem{Kasen1981}
+M.B. Kasen, G.R. MacDonald, D.H. Beekman, Jr., and R.E. Schramm, {\it Advances in Cryogenic Engineering Materials} \textbf{26}, 235, (1981). 
+
+%%%% Thermal conductivity bibliography items %%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\cite{}
+
+%%% Vespel SP-1, Vespel SP-22, Graphlite CFRP, Torlon 4301
+\bibitem{Runyan2008}
+M.C. Runyan and W.C. Jones, {\it Cryogenics} \textbf{48}, 448, (2008).
+
+%%% Vespel SCP-5000, Vespel SCP-5050, Ti 15-3-3-3
+\bibitem{Kellaris2013}
+N.A. Kellaris. {\it Unpublished thermal conductivity measurements}, (2013).
+
+%%% AXM-5Q
+\bibitem{Woodcraft2009}
+A.L. Woodcraft, M. Barucci, P.R. Hastings, L. Lolli, V. Martelli, L. Risegari, and G. Ventura, {\it Cryogenics} \textbf{49}, 159, (2009).
+
+%%% G-10CR & Macor
+\bibitem{Wood2009}
+A.L. Woodcraft and A. Gray, {\it Low Temp. Detectors 13, Proceedings of the 13$^{th}$ International Workshop}, \textbf{1185}, 681, (2009).
+
+%%% Kevlar 49
+\bibitem{Ventura2009}
+G. Ventura and V. Martelli, {\it Cryogenics} \textbf{49}, 376, (2009).
 
 \end{thebibliography}
 
