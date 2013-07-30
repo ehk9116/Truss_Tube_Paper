@@ -51,13 +51,19 @@ Cryogenic support structures are typically engineered to meet three design speci
 
 Materials are defined by specific properties which are theoretically identical for all specimens of a single material type.  In actuality, these material properties deviate slightly from sample to sample due to differences in manufacturing, however the deviation is negligible for high quality production.  There are a few main properties that are of interest when creating cryogenic tower support structures.  
 
-The main structural property is the material's Youngs Modulus.  Youngs Modulus is a property that directly defines a materials stiffness or elasticity.  Materials with high Youngs Modulus are better suited for creating stiff structures because they deform less under load than materials with lower ones.  Youngs Modulus can be further broken down into compressive and tensile modulus for non isometric materials. Other structural properties of interest include both tensile and compressive strength which define the materials ability to withstand an applied force, in tension and compression respectively, without failing through plastic deformation or fracture.  While not defined by a specific property, the type of material (brittle or ductile) should also be taken into account due to the fact that buckling tends to occur before the onset of other failure modes in slender samples of non-brittle materials.  
+The property that describes the stiffness or elasticity of a material is its Youngs Modulus. It is slope of the stress versus strain curve and it is sometimes different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus'). It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments etc. 
 
-Materials cannot be solely selected on their structural properties however, as thermal resistivity between stages is also a concern in cryogenic support structures. Thermal conductivity is a concern, which narrows down a large number of stiff materials that typically are used in non-cryogenic application structures.  Overall materials must be stiff enough to not fail under expected loads ranges while keeping their cross section as low as possible to minimize the amount of heat transfer between temperature stages.  In general when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.\cite{Hastings1993}  
+\textcolor{yellow}{Now say more about support  loading... `structures generally experience the same magnitude of compressive and tensile forces so one much general pay attentions to the smaller moduli of the two.'...}
 
-\section{Property Results of Useful Materials}
+\textcolor{yellow}{we might also point out the choice of metallic versus non-metalic support ... we should definitely  discuss thermal conductivity more and talk about thermal conductivity curve  steepness and  stability of the system }
 
-A variety of materials exist with acceptable strength and thermal properties for use in a cryogenic support structure setting.  In the plot and table below we present a few newer useful materials along with industry standard ones that have a low thermal conductivity to Youngs Modulus ratio.\cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009}
+\textcolor{yellow}{say a sentence about A/l (site hastings) and introduce the graph  }
+
+\textcolor{red}{Materials with high Youngs Modulus are better suited for creating stiff structures because they deform less under load than materials with lower ones.  Youngs Modulus can be further broken down into compressive and tensile modulus for non isometric materials. Other structural properties of interest include both tensile and compressive strength which define the materials ability to withstand an applied force, in tension and compression respectively, without failing through plastic deformation or fracture.  While not defined by a specific property, the type of material (brittle or ductile) should also be taken into account due to the fact that buckling tends to occur before the onset of other failure modes in slender samples of non-brittle materials.  Materials cannot be solely selected on their structural properties however, as thermal resistivity between stages is also a concern in cryogenic support structures. Thermal conductivity is a concern, which narrows down a large number of stiff materials that typically are used in non-cryogenic application structures.  Overall materials must be stiff enough to not fail under expected loads ranges while keeping their cross section as low as possible to minimize the amount of heat transfer between temperature stages.  In general when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.\cite{Hastings1993} <- I have tried to condense and focus this more on Youngs mudulus as opposed to youngs modulus and yield strength  }
+
+%\section{Property Results of Useful Materials} <- probably not necessary
+
+\textcolor{red}{A variety of materials exist with acceptable strength and thermal properties for use in a cryogenic support structure setting.  In the plot and table below we present a few newer useful materials along with industry standard ones that have a low thermal conductivity to Youngs Modulus <- probably needs to be reworked after implementing the above} ratio.\cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009}
 
 \begin{figure}[!ht]
 \begin{center}
@@ -75,7 +81,7 @@ A variety of materials exist with acceptable strength and thermal properties for
   width=0.85\linewidth,
   keepaspectratio]{Table}
 \end{center}
-\caption{Material strength properties of some select materials at room temperature.}
+\caption{Material strength properties of some select materials at room temperature.\textcolor{yellow}{we should include density and heat capacity extimates}}
 \label{SW}
 \end{figure}
 
