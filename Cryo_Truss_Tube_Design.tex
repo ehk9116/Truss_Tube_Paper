@@ -38,32 +38,18 @@ Design specifications for the support structures of low temperature instrumentat
  
 \end{abstract}
 
-\section{Introduction}
-\textcolor{red}{Both slender member truss and thin-walled tube structures exhibit desirable qualities for low temperature instrumentation support structures because these designs afford high structural stiffness and low heat flux across temperature stages. <- may not be needed if we focus on materials}  
-Cryogenic support structures are typically engineered to meet three design specifications: low thermal conductance, high strength, high stiffness. Designing support structures that obtain the lowest thermal conductance between temperature stages while still remaining structurally adequate to support forces imposed during operation at base temperature and during handling at room temperature is an optimization problem. The thermal consideration usually results in structures suspended by elements possessing minimized cross-sectional area -- thin plates, webs of yarn, slender rods or tubes. The application will dictate which of strength or stiffness that imposes next most limiting design constraint. Focusing on the case of stiffness, we draw attention to the fact that both stiffness and power conducted proportional to the cross-sectional area, $A$,  divided by the length, $l$, of the structure support members (cite hastings). As we shall explain, this provides a helpful parameterization for the selection of cryogenic support structural materials.  
-
-
-
-\textcolor{yellow}{Unlike design geometry alterations, a change of material used to build a structure tends to be a much easier and predictable way to improve upon a design in terms of its performance under a force or heat load. Another advantage of material selection in terms of optimization comes in the form of theoretical equations and computer simulation for a structure's projected performance.  Unlike geometric changes to a structures shape, a change in the material used does not necessitate a change in the governing equations or model for theoretical evaluation due to the fact that material properties tend to be well defined dependent variables in both. <- move to the conclusion and rewrite to emphasize the `this article is useful to those who have already committed to a design because a judicious change of support material could improve performance without necessarily entailing detailed modeling' or something like that}
-\textcolor{red}{Material selection is also an important factor to keep in mind when it comes to a structure's non-ideal performance in the lab. Under non-ideal circumstances, materials and structures typically fail before their theoretical yield or break point due to imperfections, including but not limited to impurities or microscopic fractures introduced while processing the material. <- this is an important consideration but out of scope for the current focus of the paper, I think}
+\section{Introduction} 
+Cryogenic support structures are typically engineered to meet three design specifications: low thermal conductance, high strength, and high stiffness. Creating support structures that obtain the lowest thermal conductance between temperature stages while still remaining structurally adequate to support forces imposed during operation at base temperature and during handling at room temperature is an design optimization problem. The thermal consideration usually results in structures suspended by elements possessing minimized cross-sectional area -- thin plates, webs of yarn, slender rods or tubes. The application will dictate which of strength or stiffness that imposes next most limiting design constraint. Focusing on the case of stiffness, we draw attention to the fact that both stiffness and power conducted proportional to the cross-sectional area, $A$, divided by the length, $l$, of the structure support members.\cite{Hastings1993} As we shall explain, this provides a helpful parameterization for the selection of cryogenic support structural materials.  
 
 \section{Material Selection Design Parameters}
 
 Materials are defined by specific properties which are theoretically identical for all specimens of a single material type.  In actuality, these material properties deviate slightly from sample to sample due to differences in manufacturing, however the deviation is negligible for high quality production.  There are a few main properties that are of interest when creating cryogenic tower support structures.  
 
-The property that describes the stiffness or elasticity of a material is its Youngs Modulus. It is slope of the stress versus strain curve and it is sometimes different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus'). It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments etc. 
+The property that describes the stiffness or elasticity of a material is its Youngs Modulus. It is slope of the stress versus strain curve and is sometimes different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus'). It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc. When loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure.
 
-\textcolor{yellow}{Now say more about support  loading... `structures generally experience the same magnitude of compressive and tensile forces so one much general pay attentions to the smaller moduli of the two.'...}
+It is also important to note the other properties of the material being used.  Ductile materials, such as most metals, tend to fail from shear forces first, while brittle materials like carbon fibers fail from normal forces first.  Another aspect of material selection is that of metallic versus non-metallic support. Metallic supports can be quite stiff, however they are not ideal for structures with electrically isolated stages.  The shape of the thermal conductivity cure also plays an important roll as steep thermal conductivity curves tend to cause stages to be greatly thermally loaded for small changes in temperatures.
 
-\textcolor{yellow}{we might also point out the choice of metallic versus non-metalic support ... we should definitely  discuss thermal conductivity more and talk about thermal conductivity curve  steepness and  stability of the system }
-
-\textcolor{yellow}{say a sentence about A/l (site hastings) and introduce the graph  }
-
-\textcolor{red}{Materials with high Youngs Modulus are better suited for creating stiff structures because they deform less under load than materials with lower ones.  Youngs Modulus can be further broken down into compressive and tensile modulus for non isometric materials. Other structural properties of interest include both tensile and compressive strength which define the materials ability to withstand an applied force, in tension and compression respectively, without failing through plastic deformation or fracture.  While not defined by a specific property, the type of material (brittle or ductile) should also be taken into account due to the fact that buckling tends to occur before the onset of other failure modes in slender samples of non-brittle materials.  Materials cannot be solely selected on their structural properties however, as thermal resistivity between stages is also a concern in cryogenic support structures. Thermal conductivity is a concern, which narrows down a large number of stiff materials that typically are used in non-cryogenic application structures.  Overall materials must be stiff enough to not fail under expected loads ranges while keeping their cross section as low as possible to minimize the amount of heat transfer between temperature stages.  In general when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.\cite{Hastings1993} <- I have tried to condense and focus this more on Youngs mudulus as opposed to youngs modulus and yield strength  }
-
-%\section{Property Results of Useful Materials} <- probably not necessary
-
-\textcolor{red}{A variety of materials exist with acceptable strength and thermal properties for use in a cryogenic support structure setting.  In the plot and table below we present a few newer useful materials along with industry standard ones that have a low thermal conductivity to Youngs Modulus <- probably needs to be reworked after implementing the above} ratio.\cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009}
+Overall when deciding on materials, they must be stiff enough to not fail under expected loads ranges while keeping their cross section is low as possible to minimize the amount of heat transfer between temperature stages. Because stiffness and power conducted are both proportional to the cross-sectional area divided by the length, $A/l$, we can normalize the Youngs modulus of a material by its thermal conductance in order to compare multiple materials for use in these structures.  In general because a high stiffness and low thermal conductance is desired, when choosing materials we desire the smallest Thermal conductivity to Youngs Modulus ratio.\cite{Hastings1993}  A variety of materials exist with acceptable strength and thermal properties for use in a cryogenic support structure setting.  In the plot below we present a few newer useful materials along with industry standard ones that have the desired low thermal conductivity to Youngs Modulus ratio. A similar plot to the data presented below comparing thermal conductivity to yield strength can be found in Runyan's 2008 paper {\it Cryogenics}.\cite{Runyan2008}
 
 \begin{figure}[!ht]
 \begin{center}
@@ -71,27 +57,25 @@ The property that describes the stiffness or elasticity of a material is its You
   width=0.95\linewidth,
   keepaspectratio]{Mats}
 \end{center}
-\caption{A selection of popular and useful materials with their room temperature Youngs modulus normalized by their thermal conductivity.  Lower values correspond to materials with lower thermal conductivity to stiffness ratio, thus making them more ideal materials for support structures.}
+\caption{A selection of popular and useful materials with their room temperature Youngs modulus normalized by their thermal conductivity.  Lower values correspond to materials with lower thermal conductivity to stiffness ratio, thus making them more ideal materials for support structures. \cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009} }
 \label{Mats}
 \end{figure}
 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[%
-  width=0.85\linewidth,
+  width=0.75\linewidth,
   keepaspectratio]{Table}
 \end{center}
-\caption{Material strength properties of some select materials at room temperature.\textcolor{yellow}{we should include density and heat capacity extimates}}
+\caption{Some m2aterial strength and thermal properties of some select materials at room temperature.}
 \label{SW}
 \end{figure}
 
 \section{Conclusions}
-While many different geometric design solutions are available when creating cryogenic support structures, material selection plays a vital role in allowing structures to remain strong while providing low heat loads between stages.  It is important to pick the material to cater specifically to the design specifications of the structure as some materials are better suited than others under specific load types.  The value of interest is the thermal conductivity of a material normalized to its strength, which for simplicity is typically the Youngs modulus, however other parameters for material strength can be used if the design calls for them.
-
-\textcolor{red}{Point people to marc runyans paper for a similar graph comparing thermal conductivity to yield strength}
+While many different geometric design solutions are available when creating cryogenic support structures, material selection plays a vital role in allowing structures to remain strong while providing the lowest possible heat loads between stages.  It is important to pick the material to cater specifically to the design specifications of the structure as some materials are better suited than others under specific load types.  The value of interest is the thermal conductivity of a material normalized to its strength, which for simplicity is typically the Youngs modulus, however other parameters for material strength can be used if the design calls for them.  Unlike design geometry alterations, a change of material used to build a structure tends to be a much easier and predictable way to improve upon a design in terms of its performance under a force or heat load. Another advantage of material selection in terms of optimization comes in the form of theoretical equations and computer simulation for a structure's projected performance.  Unlike geometric changes to a structures shape, a change in the material used does not necessitate a change in the governing equations or model for theoretical evaluation due to the fact that material properties tend to be well defined dependent variables in both.  For geometric designs that already exist and cannot be altered, a judicious change of support material using the data presented here could improve performance without necessarily entailing further detailed modeling.
 
 \begin{acknowledgements}
-We would like to thank S. Govindjee for technical assistance. We acknowledge support and funding from the Department of Energy and the National Science Foundation.
+We would like to thank Sanjay Govindjee for technical assistance. We acknowledge support and funding from the Department of Energy and the National Science Foundation.
 \end{acknowledgements}
 
 \begin{thebibliography}{99}
@@ -99,7 +83,7 @@ We would like to thank S. Govindjee for technical assistance. We acknowledge sup
 %%%%%%%%% Structure bibliography items %%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibitem{Hastings1993}
-Peter R. Hastings and D.M. Montgomery. Support of cooled components in astronomical instruments. Cryogenics, 33(11):1032–1036, 1993.
+Peter R. Hastings and D.M. Montgomery. {\it Support of cooled components in astronomical instruments. Cryogenics} \textbf{2633(11):1032–1036}, 1993.
 
 %%%%%% Young's modulus bibliography items %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
