@@ -43,7 +43,7 @@ Cryogenic support structures are typically engineered to meet three design speci
 
 \section{Material Selection Design Parameters}
 
-The property that describes the stiffness or elasticity of a material is its Young's modulus\footnote{Young's modulus is formally for tensile stresses, but one can easily extend the notion to compressive forces on a material. Young's Modulus is sometimes called \em{elastic modulus} or \em{modulus of elasticity}.}. It is slope of the stress versus strain curve and is sometimes different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus'). It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc. When loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure.
+The property that describes the stiffness or elasticity of a material is its Young's modulus\footnote{Young's modulus is formally defined for tensile stresses, but one can easily extend the notion to compressive forces on a material. Young's Modulus is sometimes called \em{elastic modulus} or \em{modulus of elasticity}.}. It is slope of the stress versus strain curve and is sometimes different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus'). It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc. When loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure.
 
 It is also important to note the other properties of the material being used.  Ductile materials, such as most metals, tend to fail from shear forces first, while brittle materials like carbon fibers fail from normal forces first.  Another aspect of material selection is that of metallic versus non-metallic support. Metallic supports can be quite stiff, however they are not ideal for structures with electrically isolated stages.  The shape of the thermal conductivity cure also plays an important roll as steep thermal conductivity curves creates susceptability to thermal run-aways in the cryostat. 
 
@@ -52,10 +52,10 @@ Overall when deciding on materials, they must be stiff enough to not fail under 
 \begin{figure}[!ht]
 \begin{center}
 \includegraphics[%
-  width=0.95\linewidth,
+  width=1.0\linewidth,
   keepaspectratio]{Mats}
 \end{center}
-\caption{A selection of useful materials with their room temperature Young's modulus normalized by their thermal conductivity.  Lower values are desirable as support materials. \cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009} }
+\caption{A selection of useful materials with their room temperature Young's modulus normalized by their thermal conductivity.  Lower values are desirable as support materials. \color{red}{Need to call out which data came from publication. Also, need to add stainless steel!} \cite{Doty1981}\cite{Kasen1981}\cite{Runyan2008}\cite{Kellaris2013}\cite{Woodcraft2009}\cite{Woodcraft2009_2}\cite{Ventura2009} }
 \label{Mats}
 \end{figure}
 
