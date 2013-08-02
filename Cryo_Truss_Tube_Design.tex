@@ -12,6 +12,7 @@
 \usepackage{color}
 \usepackage{epstopdf}
 \usepackage[table]{xcolor}
+\usepackage{threeparttable}
 
 \makeatletter
 \journalname{Journal of Low Temperature Physics}
@@ -46,32 +47,34 @@ Cryogenic support structures are typically engineered to meet three design speci
 
 \section{Material Selection and Design Parameters}
 
-\begin{table}[h]%THERMOPHYSICAL PROPERTIES
+\begin{table}[htb]%THERMOPHYSICAL PROPERTIES
+\begin{threeparttable}
 \rowcolors{3}{gray!20}{white}
 \begin{tabular}{lrrrrrr}
 \toprule
 \textbf{Material} & $\rho$ ($\frac{g}{cm^3}$) & $\nu$ & $\sigma_{t}$ (MPa) & $\sigma_{c}$ (MPa) & TM (GPa) & CM (CPa) \\
 \midrule
- POCO AXM-5Q & 1.73 & 0.27 & 48 & 124\phantom{$^*$} & 10.5\phantom{$^{\dag}$} & -\phantom{$^*$} \\
- TIMET Ti 15-3-3-3 & 4.78 & 0.36 & 766 & 810$^*$ & 82.0\phantom{$^{\dag}$} & 90.0$^*$ \\
- Stainless 316LN & 7.99 & 0.29 & 690 & -\phantom{$^*$} & 200.0\phantom{$^{\dag}$} & -\phantom{$^*$} \\
- Vespel SP-1 & 1.43 & 0.41 & 86 & 133\phantom{$^*$} & 2.5$^{\dag}$ & 2.4\phantom{$^*$} \\
- Vespel SCP-5000 & 1.46 & - & 163 & 640\phantom{$^*$} & 4.0\phantom{$^{\dag}$} & 9.1\phantom{$^*$} \\
- Vespel SP-22 & 1.65 & - & 52 & 112\phantom{$^*$} & 2.5\phantom{$^{\dag}$} & 3.3\phantom{$^*$} \\
- Vespel SCP-5050 & 1.76 & 0.22 & 72 & 219\phantom{$^*$} & 8.9\phantom{$^{\dag}$} & 3.0\phantom{$^*$} \\
- Torlon 4301 & 1.46 & - & 113 & 166\phantom{$^*$} & 6.8\phantom{$^{\dag}$} & 5.3\phantom{$^*$} \\
- G-10CR & 1.90 & 0.18 & 429 & 374\phantom{$^*$} & 27.9\phantom{$^{\dag}$} & 15.0\phantom{$^*$} \\
- Graphlite CF Rod & 1.55 & -  & 2340 & 1900\phantom{$^*$} & 134.0\phantom{$^{\dag}$} & 131.0\phantom{$^*$} \\
- Kevlar 49 Fibers & 1.44 & 0.36 & 3000 & -\phantom{$^*$} & 112.4\phantom{$^{\dag}$} & -\phantom{$^*$} \\
- Macor & 2.52 & 0.29 & 90 & 345\phantom{$^*$} & 66.9\phantom{$^{\dag}$} & 64.0\phantom{$^*$} \\
+ POCO AXM-5Q & 1.73 & 0.27 & 48\tnote{U} & 124\tnote{U} & 10.5 & - \\
+ TIMET Ti 15-3-3-3 & 4.78 & 0.36 & 766\tnote{Y} & 810\tnote{Y} & 82.0 & 90.0\\
+ Stainless 316LN & 7.99 & 0.29 & 690\tnote{Y} & - & 200.0 & - \\
+ Vespel SP-1 & 1.43 & 0.41 & 86 & 133\tnote{*} & 2.5\tnote{\dag} & 2.4 \\
+ Vespel SCP-5000 & 1.46 & - & 163 & 230\tnote{*} & 4.0 & 9.1 \\
+ Vespel SP-22 & 1.65 & - & 52 & 112\tnote{*} & 2.5 & 3.3 \\
+ Vespel SCP-5050 & 1.76 & 0.22 & 72 & 172\tnote{*} & 8.9 & 3.0 \\
+ Torlon 4301 & 1.46 & - & 113\tnote{U} & 166\tnote{U} & 6.8 & 5.3 \\
+ G-10CR & 1.90 & 0.18 & 429\tnote{U} & 374\tnote{U} & 27.9 & 15.0 \\
+ Graphlite CF Rod & 1.55 & -  & 2340 & 1900 & 134.0 & 131.0 \\
+ Kevlar 49 Fibers & 1.44 & 0.36 & 3000\tnote{U} & - & 112.4 & - \\
+ Macor & 2.52 & 0.29 & 90\tnote{U} & 345\tnote{U} & 66.9 & 64.0 \\
 
  \bottomrule
 \end{tabular}
-\caption{Some physical and mechanical properties of candidate materials. $\nu$ is the Poisson's ratio for the material, while $\sigma_{t}$ and $\sigma_{c}$ are the \color{yellow}{tensile and compressive strengths <-yield, elastic limit, or UTS? } for the material, respectively. TM and CM are the tensile and compressive elastic moduli. A blank indicates that the specified property could not be found in the literature for a given material. Data comes largely from manufacturer's literature; where values were missing from manufacturer literature, outside references were used; references as well as relevant notes about the material properties are as follows: POCO AXM-5Q -- $\nu$ \cite{Swank2009}; Ti 15-3-3-3 -- $\nu$, $\sigma_t$, $\sigma_c$, CM from \cite{Lang2001}\cite{Johnson1996}\cite{Nyakana2005}. Properties were for solution-treated material. $^*$ - Properties estimated from graphs in manufacturer's literature; SS316LN -- $\nu$ from \cite{Shankar2001}. Other data are from SS316LN data sheet for cold worked material (www.finetubes.com); Vespel -- TM for SP-1 from \cite{Doty1981}. All data were for isostatically formed parts. $\dag$ - estimated from manufacturer's stress-strain plot; G-10CR -- all data from \cite{Kasen1981}\cite{Markley1985}. Properties taken in the warp direction; Graphlite CFRP -- properties along the fiber axis; Kevlar 49 -- all data are for unfilled fibers; Macor -- $\sigma_t$ and CM from \cite{Markley1985}\cite{websiteMacor}.}
+\caption{Some physical and mechanical properties of candidate materials. $\nu$ is the Poisson's ratio for the material, while $\sigma_{t}$ and $\sigma_{c}$ are the tensile and compressive strengths for the material, respectively. Superscripts on strengths refer to: Y - yield strength, U - ultimate strength, * - compressive load at \%10 strain. Unmarked numbers have unknown failure conditions. TM and CM are the tensile and compressive elastic moduli. A blank indicates that the specified property could not be found in the literature for a given material. Data comes largely from manufacturer's literature; where values were missing from manufacturer literature, outside references were used; references as well as relevant notes about the material properties are as follows: POCO AXM-5Q -- $\nu$ \cite{Swank2009}; Ti 15-3-3-3 -- $\nu$, $\sigma_t$, $\sigma_c$, CM from \cite{Lang2001}\cite{Johnson1996}\cite{Nyakana2005}. Properties were for solution-treated material; SS316LN -- $\nu$ from \cite{Shankar2001}. Other data are from SS316LN data sheet for cold worked material (www.finetubes.com); Vespel -- TM for SP-1 from \cite{Doty1981}. All data were for isostatically formed parts. $\dag$ - estimated from manufacturer's stress-strain plot; G-10CR -- all data from \cite{Kasen1981}\cite{Markley1985}. Properties taken in the warp direction; Graphlite CFRP -- properties along the fiber axis; Kevlar 49 -- all data are for unfilled fibers; Macor -- $\sigma_t$ and CM from \cite{Markley1985}\cite{websiteMacor}.}
 \label{SW}
+\end{threeparttable}
 \end{table}
 
-The property that is primarily used to describe the stiffness or elasticity of a material is its Young's modulus. Youngs modulus is formally defined for tensile stresses, but for isotropic materials one can extend the value for use with compressive forces. Young's Modulus is sometimes called {\em elastic modulus} or {\em modulus of elasticity}. It is the ratio of the stress along a given axis over the strain along the same axis in the range of values where Hooke's law holds\footnote{Stress ($\sigma$) here is defined as the force applied in the normal direction to a sample's cross section divided by the cross sectional area of the sample (assuming a constant cross sectional area) $\sigma = F/A_{0}$.  Strain ($\epsilon$) is defined as the change in length of the sample in the direction of the applied force over the original length $\epsilon=\Delta L/L_{0}$.}.  Youngs modulus can sometimes be different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus')\footnote{When tensile and compressive moduli are not equal this due to an asymmetry (e.g. the specimen is a string), a rapid variation of the modulus occurs through zero strain, but this is not a discontinuity in the curve. Materials exhibiting this rapid change in modulus around zero stress are called {\em bimodulus} or {\em bilinear} materials.}. It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc. When loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure. Another property that can be useful for some applications is the Shear modulus, which as its name suggests is the analogous to the Youngs modulus for shear forces.  For the scope of this paper we will be focusing primarily on the Youngs modulus as it tends to be the more useful of the two for creating stiff cryogenic support structures. 
+The property that is primarily used to describe the stiffness or elasticity of a material is its Young's modulus. Youngs modulus is formally defined for tensile stresses, but for isotropic materials one can extend the value for use with compressive forces. Young's Modulus is sometimes called {\em elastic modulus} or {\em modulus of elasticity}. It is the ratio of the stress along a given axis over the strain along the same axis in the range of values where Hooke's law holds\footnote{Stress ($\sigma$) here is defined as the force applied in the normal direction to a sample's cross section divided by the cross sectional area of the sample (assuming a constant cross sectional area) $\sigma = F/A_{0}$.  Strain ($\epsilon$) is defined as the change in length of the sample in the direction of the applied force over the original length $\epsilon=\Delta L/L_{0}$.}.  Youngs modulus can sometimes be different for tensile stress (the `tensile modulus') and the compressive stress (the `compressive modulus')\footnote{When tensile and compressive moduli are not equal this due to an asymmetry (e.g. the specimen is a string), a rapid variation of the modulus occurs through zero strain, but this is not a discontinuity in the curve. Materials exhibiting this rapid change in modulus around zero stress are called {\em bimodulus} or {\em bilinear} materials.}. It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc. When loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure. Another property that can be useful for some applications is the Shear modulus, which as its name suggests is the analogous to the Youngs modulus for shear forces.  For the scope of this paper we will be focusing primarily on the Youngs modulus as it tends to be the more useful of the two for creating stiff cryogenic support structures.
 
 It is also important to note the other properties of the material being used.  Ductile materials, such as most metals, tend to fail from shear forces first, while brittle materials like carbon fibers fail from normal forces first.  Another aspect of material selection is that of metallic versus non-metallic support. Metallic supports can be quite stiff, however they are not ideal for structures with electrically isolated stages.  The shape of the thermal conductivity curve plays an important role as steep thermal conductivity curves create susceptibility to thermal run-aways in the cryostat.
 
