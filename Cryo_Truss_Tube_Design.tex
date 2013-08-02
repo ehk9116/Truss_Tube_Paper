@@ -47,6 +47,8 @@ Cryogenic support structures are typically engineered to meet three design speci
 
 \section{Material Selection and Design Parameters}
 
+The property that is primarily used to describe the stiffness or elasticity of a material is its Young's modulus. Young's modulus is formally defined for tensile stresses, but for isotropic materials one can extend the notion for use with compressive forces. Young's Modulus is sometimes called the {\em elastic modulus} or {\em modulus of elasticity}. It is the ratio of the stress along a given axis over the strain along the same axis in the range of values where Hooke's law holds\footnote{Stress ($\sigma$) here is defined as the force applied in the direction normal to a sample's cross section divided by the cross sectional area of the sample (assuming a constant cross sectional area) $\sigma = F/A_{0}$.  Strain ($\epsilon$) is defined as the change in length of the sample in the direction of the applied force over the original length $\epsilon=\Delta L/L_{0}$.}.  Young's modulus can sometimes be different for tensile stress (the {\em tensile modulus}) and the compressive stress (the {\em compressive modulus})\footnote{When tensile and compressive moduli are not equal this is due to an asymmetry (e.g. the specimen is a string), or a rapid variation of the modulus which occurs through zero strain, but this is not a discontinuity in the curve. Materials exhibiting this rapid change in modulus around zero stress are called {\em bimodulus} or {\em bilinear} materials.}. It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc.
+
 \begin{table}[htb]%THERMOPHYSICAL PROPERTIES
 \begin{threeparttable}
 \rowcolors{3}{gray!20}{white}
@@ -74,8 +76,6 @@ Cryogenic support structures are typically engineered to meet three design speci
 \end{threeparttable}
 \end{table}
 
-The property that is primarily used to describe the stiffness or elasticity of a material is its Young's modulus. Youngs modulus is formally defined for tensile stresses, but for isotropic materials one can extend the notion for use with compressive forces. Young's Modulus is sometimes called the {\em elastic modulus} or {\em modulus of elasticity}. It is the ratio of the stress along a given axis over the strain along the same axis in the range of values where Hooke's law holds\footnote{Stress ($\sigma$) here is defined as the force applied in the direction normal to a sample's cross section divided by the cross sectional area of the sample (assuming a constant cross sectional area) $\sigma = F/A_{0}$.  Strain ($\epsilon$) is defined as the change in length of the sample in the direction of the applied force over the original length $\epsilon=\Delta L/L_{0}$.}.  Youngs modulus can sometimes be different for tensile stress (the {\em tensile modulus}) and the compressive stress (the {\em compressive modulus})\footnote{When tensile and compressive moduli are not equal this is due to an asymmetry (e.g. the specimen is a string), or a rapid variation of the modulus which occurs through zero strain, but this is not a discontinuity in the curve. Materials exhibiting this rapid change in modulus around zero stress are called {\em bimodulus} or {\em bilinear} materials.}. It should also be pointed out that different samples of the same material may have different moduli as a result of their defect characteristics, heat treatments, etc.
-
 Except for yarn webbings, when loading a cryogenic support structure, the forces experienced generally tend to be of the same magnitude in both compressive and tensile directions.  Because of this, the smaller of the two moduli, the tensile modulus or the compressive modulus, must be focused on in order to keep a sufficient factor of safety and prevent premature failure.
 
 It is also important to note the other properties of the material being used.  Ductile materials, such as most metals, tend to fail from shear forces first, while brittle materials like carbon fibers fail from normal forces first.  Another aspect of material selection is that of metallic versus non-metallic support. Metallic supports can be quite stiff, however they are not ideal for applications requiring electrically isolated stages.  Also, The shape of the thermal conductivity curve plays an important role as steep thermal conductivity curves create susceptibility to thermal run-aways in the cryostat.
@@ -85,10 +85,10 @@ Overall, when deciding on materials, they must be stiff enough to not fail under
 \begin{figure}[ht]
 \begin{center}
 \includegraphics[%
-  width=.95\linewidth,
+  width=1\linewidth,
   keepaspectratio]{E_norm_support_K.eps}
 \end{center}
-\caption{A selection of useful materials with their room temperature Young's modulus normalized by their thermal conductivity.  Lower values are desirable as support materials.  Thermal conductivity references: Vespel SP-1, Vespel SP-22, Graphlite CFRP, and Torlon 4301 from Runyan\cite{Runyan2008}; Vespel SCP-5000, Vespel SCP-5050, and Ti 15-3-3-3 (under 20\% cold work after anneal) from Kellaris\cite{Kellaris2013}; AXM-5Q, G-10CR, and Macor from Woodcraft\cite{Woodcraft2009} \cite{Woodcraft2009_2}; Kevlar 49 from Ventura\cite{Ventura2009}; Stainless Steel 316LN from Barucci\cite{Barucci2008}. Youngs moduli from table above.}
+\caption{A selection of useful materials with their room temperature Young's modulus normalized by their thermal conductivity.  Lower values are desirable as support materials.  Thermal conductivity references: Vespel SP-1, Vespel SP-22, Graphlite CFRP, and Torlon 4301 from Runyan\cite{Runyan2008}; Vespel SCP-5000, Vespel SCP-5050, and Ti 15-3-3-3 (under 20\% cold work after anneal) from Kellaris\cite{Kellaris2013}; AXM-5Q, G-10CR, and Macor from Woodcraft\cite{Woodcraft2009} \cite{Woodcraft2009_2}; Kevlar 49 from Ventura\cite{Ventura2009}; Stainless Steel 316LN from Barucci\cite{Barucci2008}. Young's moduli from table above.}
 \label{Mats}
 \end{figure}
 
